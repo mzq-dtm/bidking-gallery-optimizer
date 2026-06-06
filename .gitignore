@@ -1,0 +1,7 @@
+.idea/
+
+__pycache__/
+*.pyc
+
+AGENTS.md
+item_category.csv
