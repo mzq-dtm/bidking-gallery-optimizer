@@ -1,13 +1,15 @@
 from __future__ import annotations
-
+import sys
 import json
 import locale
 import tomllib
 from collections import Counter, defaultdict
 from pathlib import Path
 
-
-BASE_DIR = Path(__file__).resolve().parent
+if getattr(sys, "frozen", False):
+    BASE_DIR = Path(sys.executable).resolve().parent
+else:
+    BASE_DIR = Path(__file__).resolve().parent
 CABINETS_PATH = BASE_DIR / "display_cabinets.toml"
 ITEMS_PATH = BASE_DIR / "item_category.json"
 BACKPACK_PATH = BASE_DIR / "backpack_items.json"
