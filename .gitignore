@@ -2,6 +2,9 @@
 
 __pycache__/
 *.pyc
+*.spec
+
+*.bak
 
 AGENTS.md
 item_category.csv
